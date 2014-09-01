@@ -9,4 +9,5 @@
     - libjpeg-progs
     - optipng
     - pngquant
+    - libpng12-dev
   sudo: yes
