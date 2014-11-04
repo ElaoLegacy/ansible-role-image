@@ -7,8 +7,6 @@
   with_items:
     - gifsicle
     - libjpeg-progs
-    - optipng
-    - pngquant
     - libpng12-dev # NodeJS module "imagemin-optipng"
     - nasm # NodeJS module "imagemin-jpegtran"
   sudo: yes
