@@ -1,12 +1,37 @@
 ---
 
-- name: packages
-  apt: >
-    name={{ item }}
-    state=present
-  with_items:
-    - gifsicle
-    - libjpeg-progs
-    - libpng12-dev # NodeJS module "imagemin-optipng"
-    - nasm # NodeJS module "imagemin-jpegtran"
+- name: gifsicle binary
+  copy: >
+    src=gifsicle
+    dest=/usr/local/bin/gifsicle
+    owner=root
+    group=root
+    mode=0755
+  sudo: yes
+
+- name: jpegtran binary
+  copy: >
+    src=jpegtran
+    dest=/usr/local/bin/jpegtran
+    owner=root
+    group=root
+    mode=0755
+  sudo: yes
+
+- name: optipng binary
+  copy: >
+    src=optipng
+    dest=/usr/local/bin/optipng
+    owner=root
+    group=root
+    mode=0755
+  sudo: yes
+
+- name: pngquant binary
+  copy: >
+    src=pngquant
+    dest=/usr/local/bin/pngquant
+    owner=root
+    group=root
+    mode=0755
   sudo: yes
